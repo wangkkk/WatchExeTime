@@ -1,0 +1,17 @@
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\WatchExeTime.DAO.Services.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\WatchExeTime.DAO.Services.pdb
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\Dapper.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\WatchExeTime.DAO.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\WatchExeTime.DAO.IServices.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\System.Data.SQLite.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\WatchExeTime.DAO.IServices.pdb
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\WatchExeTime.DAO.pdb
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\WatchExeTime.DAO.dll.config
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\Dapper.pdb
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\Dapper.xml
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\obj\Debug\WatchExeTime.DAO.Services.csprojAssemblyReference.cache
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\obj\Debug\WatchExeTime.DAO.Services.csproj.CoreCompileInputs.cache
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\obj\Debug\WatchExeTime.DAO.Services.csproj.CopyComplete
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\obj\Debug\WatchExeTime.DAO.Services.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\obj\Debug\WatchExeTime.DAO.Services.pdb
+D:\QMDownload\WatchExeTime\WatchExeTime.DAO.Services\bin\Debug\Data\WatchQQTime.db

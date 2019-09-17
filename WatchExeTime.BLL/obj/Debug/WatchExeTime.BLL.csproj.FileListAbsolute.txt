@@ -1,0 +1,6 @@
+D:\QMDownload\WatchExeTime\WatchExeTime.BLL\bin\Debug\WatchExeTime.BLL.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.BLL\bin\Debug\WatchExeTime.BLL.pdb
+D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.csprojAssemblyReference.cache
+D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.csproj.CoreCompileInputs.cache
+D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.dll
+D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.pdb
