@@ -39,7 +39,7 @@ namespace WatchExeTime
         public MainWindow()
         {
             SetWindow.SetCustomWindow(this);
-           
+         
             InitializeComponent();
             this.Loaded += (sender, e) =>
             {
@@ -61,11 +61,11 @@ namespace WatchExeTime
         {
             if (keyId == hotKey1)
             {
-                this.Visibility = Visibility.Hidden;
+                this.Visibility = Visibility.Hidden;//隐藏窗口
             }
             else if (keyId == hotKey2)
             {
-                this.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Visible;//显示窗口
             }
         }
         #endregion
