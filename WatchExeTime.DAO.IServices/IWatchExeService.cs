@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using WatchExeTime.DAO.Model;
 
 namespace WatchExeTime.DAO.IServices
@@ -12,7 +8,7 @@ namespace WatchExeTime.DAO.IServices
     /// </summary>
     public interface IWatchExeService
     {
-        List<WatchExeModel> SelectData();
+        ObservableCollection<WatchExeModel> SelectData();
         int UpdateWathExeTime(WatchExeModel model);
     }
 }

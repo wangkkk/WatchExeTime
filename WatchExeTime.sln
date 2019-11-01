@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchExeTime.DAO.Services",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchExeTime.BLL.Service", "WatchExeTime.BLL.Service\WatchExeTime.BLL.Service.csproj", "{B3AA3EA5-6F60-4AE3-8DC2-DAAF43CDB80C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchExeTime.common", "WatchExeTime.common\WatchExeTime.common.csproj", "{D40CF8E8-C2B3-493F-B4F6-FEEE85A9F946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{B3AA3EA5-6F60-4AE3-8DC2-DAAF43CDB80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3AA3EA5-6F60-4AE3-8DC2-DAAF43CDB80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3AA3EA5-6F60-4AE3-8DC2-DAAF43CDB80C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40CF8E8-C2B3-493F-B4F6-FEEE85A9F946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40CF8E8-C2B3-493F-B4F6-FEEE85A9F946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40CF8E8-C2B3-493F-B4F6-FEEE85A9F946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40CF8E8-C2B3-493F-B4F6-FEEE85A9F946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

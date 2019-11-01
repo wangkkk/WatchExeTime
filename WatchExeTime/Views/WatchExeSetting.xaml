@@ -1,0 +1,50 @@
+﻿<Window x:Class="WatchExeTime.Views.WatchExeSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WatchExeTime.Views"
+        mc:Ignorable="d"  WindowStartupLocation="CenterScreen"  
+        Title="监视程序设置" Height="450" Width="800">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding WatchExeList,Mode=TwoWay}" SelectedItem="{Binding SelectWatchExe}">
+            <!--<i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding UpdateWatchExeCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>-->
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="程序名称"  Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                    <TextBox  Text="{Binding ExeName,Mode=TwoWay}"></TextBox>
+                    </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="程序标题名称"  Width="*">
+                   <DataGridTemplateColumn.CellTemplate>
+                       <DataTemplate>
+                            <TextBox  Text="{Binding ExeTitleName,Mode=TwoWay}"></TextBox>
+                       </DataTemplate>
+                   </DataGridTemplateColumn.CellTemplate>
+               </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="程序路径中包含的名称"  Width="*">
+                   <DataGridTemplateColumn.CellTemplate>
+                       <DataTemplate>
+                            <TextBox  Text="{Binding ExePathName,Mode=TwoWay}"></TextBox>
+                       </DataTemplate>
+                   </DataGridTemplateColumn.CellTemplate>
+               </DataGridTemplateColumn>
+                <DataGridCheckBoxColumn Header="是否正在使用"  Binding="{Binding IsUsing,Mode=TwoWay}"  Width="*"/>
+                <DataGridTextColumn Header="父类ID" Binding="{Binding ParentExeID}"  Width="*" />
+                <DataGridTemplateColumn Header="更新"  Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding Path=DataContext.UpdateWatchExeCommand,RelativeSource={RelativeSource AncestorType={x:Type Window}}}" Content="更新" CommandParameter="{Binding ExeID}"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

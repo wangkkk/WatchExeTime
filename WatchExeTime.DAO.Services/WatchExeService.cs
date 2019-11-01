@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
+﻿using Dapper;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
 using WatchExeTime.DAO.IServices;
 using WatchExeTime.DAO.Model;
 
@@ -16,9 +11,9 @@ namespace WatchExeTime.DAO.Service
     /// </summary>
     public class WatchExeService: IWatchExeService
     {
-        public List<WatchExeModel> SelectData()
+        public ObservableCollection<WatchExeModel> SelectData()
         {
-            var queryResult = SQLiteHelper.CreateConnection().Query<WatchExeModel>("select * from WatchExe")?.ToList();
+            var queryResult =new ObservableCollection<WatchExeModel>(SQLiteHelper.CreateConnection().Query<WatchExeModel>("select * from WatchExe"));
             return queryResult;
         }
         /// <summary>

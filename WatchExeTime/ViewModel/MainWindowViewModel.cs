@@ -56,8 +56,7 @@ namespace WatchExeTime.ViewModel
         {
             MainVisible = Visibility.Visible;//主窗口为可见
             CurrentWatchTimeModel = new WatchTimeModel();//初始化当前监视时间
-            //监视类型
-            WatchType = WatchTypeBLLService.Instance.SelectData();
+           
         }
 
 
@@ -101,6 +100,8 @@ namespace WatchExeTime.ViewModel
                     }
                     LeaveExeSecond++;
                     CurrentID = null;
+                    //监视类型
+                    WatchType = WatchTypeBLLService.Instance.SelectData();
                     //当为间隔时间模式时，重置时间
                     if (WatchExeSecond != 0&& true==WatchType?.IntervalType) WatchExeSecond = 0;
 
