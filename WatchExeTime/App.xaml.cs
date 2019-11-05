@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Remoting.Channels;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,55 +26,54 @@ namespace WatchExeTime
     public partial class App : Application
     {
         #region Property
-      
-        
+
+
         /// <summary>
         /// 监视程序设置界面
         /// </summary>
         private WatchExeSetting ExeSetting { get; set; }
 
         public WatchExeStageSetting WatchExeStageSetting { get; set; }
+
+        public WatchUseTime WatchUseTime { get; set; }
         #endregion
 
         public App()
         {
             //初始化数据库
             SingletonFactory.Instance.CreateJDBC(string.Empty);
+
         }
         protected override void OnStartup(StartupEventArgs e)
         {
             PropgramManager.OnlyOneExeOpen(this);
-            NotifyIconHelper.SetNotifycation(ShowStageItemWindow, ShowWatchExeTypeWindow);
+            NotifyIconHelper.SetNotifycation(ShowItemWindow);
+            ExeSetting = new WatchExeSetting();
+            WatchExeStageSetting = new WatchExeStageSetting();
+            WatchUseTime = new WatchUseTime();
         }
 
         #region Method
         /// <summary>
-        /// 打开等级设置窗口
+        /// 显示点击菜单后的界面
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ShowStageItemWindow(object sender, EventArgs e)
+        private void ShowItemWindow(object sender, EventArgs e)
         {
-            if (WatchExeStageSetting == null)
-                WatchExeStageSetting = new WatchExeStageSetting();
-            if (!WatchExeStageSetting.IsVisible)
+            switch ((sender as MenuItem)?.Name)
             {
-                WatchExeStageSetting.ShowDialog();
+                case "watchExeTypeItem":
+                    WindowHelper.ShowWindow(ExeSetting);
+                    break;
+                case "stageItem":
+                    WindowHelper.ShowWindow(WatchExeStageSetting);
+                    break;
+                case "timeItem":
+                    WindowHelper.ShowWindow(WatchUseTime);
+                    break;
             }
-        }
-        /// <summary>
-        /// 打开监视程序设置窗口
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ShowWatchExeTypeWindow(object sender, EventArgs e)
-        {
-            if (ExeSetting == null)
-                ExeSetting = new WatchExeSetting();
-            if (!ExeSetting.IsVisible)
-            { 
-                ExeSetting.ShowDialog();
-            }
+
         }
         #endregion
     }

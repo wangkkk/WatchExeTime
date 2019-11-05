@@ -25,8 +25,13 @@ namespace WatchExeTime.BLL.Service
         {
             return SingletonFactory.Instance.GetBaseFactory().CreateWatchTimeService().InsertWathExeTime(model);
         }
-
-        public double GetAllTime(int exeID)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="exeID"></param>
+        /// <param name="type">type默认返回天数 其它对应秒数</param>
+        /// <returns></returns>
+        public double GetAllTime(int exeID,int type=0)
         {
             double totalTime = 0;
             List<WatchTimeModel>  ModelList=SingletonFactory.Instance.GetBaseFactory().CreateWatchTimeService().SelectData($"ExeID={exeID}");
@@ -36,7 +41,7 @@ namespace WatchExeTime.BLL.Service
                 ModelList.ForEach(m => {if(m.EndTime!=null&&m.StartTime!=null)totalTime += ((TimeSpan)(m.EndTime - m.StartTime)).Minutes;});
             }
 
-            return totalTime!=0? (double)86400/totalTime:0;
+            return type==0?totalTime!=0? (double)86400/totalTime:0: totalTime;
         }
     }
 }

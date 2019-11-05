@@ -86,13 +86,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converter\SeCondTimeFormatConverter.cs" />
     <Compile Include="ViewModel\WatchExeSettingViewModel.cs" />
     <Compile Include="ViewModel\WatchExeStageSettingViewModel.cs" />
+    <Compile Include="ViewModel\WatchUseTimeViewModel.cs" />
     <Compile Include="Views\WatchExeSetting.xaml.cs">
       <DependentUpon>WatchExeSetting.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WatchExeStageSetting.xaml.cs">
       <DependentUpon>WatchExeStageSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WatchUseTime.xaml.cs">
+      <DependentUpon>WatchUseTime.xaml</DependentUpon>
     </Compile>
     <Page Include="Converter\Converter.xaml">
       <SubType>Designer</SubType>
@@ -120,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\WatchExeStageSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WatchUseTime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

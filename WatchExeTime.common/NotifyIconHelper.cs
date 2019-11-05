@@ -22,7 +22,7 @@ namespace WatchExeTime.common
         static WatchTypeModel WatchType { get; set; }
         static MenuItem WatchTypeSubItemOne = new MenuItem("按次显示");
         static MenuItem WatchTypeSubItemTwo = new MenuItem("按日显示");
-        public static void SetNotifycation(OpenDialog oepnStageItem,OpenDialog openWatchExeType)
+        public static void SetNotifycation(OpenDialog oepnItem)
         {
 
             notifyIcon = new NotifyIcon();
@@ -43,17 +43,22 @@ namespace WatchExeTime.common
             InitWatchType();
             MenuItem WatchExeTypeItem = new MenuItem("监视程序设置");
             MenuItem StageItem = new MenuItem("等级设置");
-            StageItem.Click +=new EventHandler(oepnStageItem);
+            MenuItem TimeItem=new MenuItem("程序使用时间");
+            TimeItem.Click+= new EventHandler(oepnItem);
+            StageItem.Click +=new EventHandler(oepnItem);
+            WatchExeTypeItem.Name = "watchExeTypeItem";
+            StageItem.Name = "stageItem";
+            TimeItem.Name = "timeItem";
             MenuItem ExitItem = new MenuItem("退出");
             ExitItem.Click += (object sender, EventArgs e) =>
             {
                 RemoveNotifycation();
                 Environment.Exit(0);
             };
-            WatchExeTypeItem.Click += new EventHandler(openWatchExeType);
+            WatchExeTypeItem.Click += new EventHandler(oepnItem);
             notifyIcon.ContextMenu = new ContextMenu()
             {
-                MenuItems = { WatchTypeItem, WatchExeTypeItem, StageItem, ExitItem }
+                MenuItems = { WatchTypeItem, WatchExeTypeItem, StageItem, TimeItem, ExitItem }
             }; // 设置右键菜单
         }
 

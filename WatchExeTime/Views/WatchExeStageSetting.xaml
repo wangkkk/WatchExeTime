@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WatchExeTime.Views"
-        mc:Ignorable="d"
-        Title="编程阶段设置" Height="450" Width="800">
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="编程等级设置" Height="450" Width="800">
     <Grid>
         <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding StageList,Mode=TwoWay}">
             <DataGrid.Columns>
