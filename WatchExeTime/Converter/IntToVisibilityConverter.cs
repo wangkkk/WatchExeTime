@@ -17,12 +17,16 @@ namespace WatchExeTime.Converter
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null) return Visibility.Collapsed;
-            else return Visibility.Visible;
+            int p = System.Convert.ToInt32(parameter);
+            if (p == 0) return Visibility.Visible;
+            else if (p == 1)
+                return value.ToString() == "1" ? Visibility.Visible : Visibility.Collapsed;
+            else return Visibility.Collapsed;
             //Int32 v = System.Convert.ToInt32(value);
             //Int32 p = System.Convert.ToInt32(parameter);
             ////p 2对应qq 1对应编程
             //return (v == 2 && p == 2)|| (v == 1 && p == 1)?Visibility.Visible:Visibility.Collapsed;
-            
+
 
         }
 

@@ -12,28 +12,28 @@
                 <DataGridTemplateColumn Header="等级"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox  Text="{Binding StageConfigID,Mode=TwoWay}"></TextBox>
+                            <TextBox  Text="{Binding StageConfigID,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="等级名称"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox  Text="{Binding StageConfigName,Mode=TwoWay}"></TextBox>
+                            <TextBox  Text="{Binding StageConfigName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="最低时间"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox  Text="{Binding MiniTime,Mode=TwoWay}"></TextBox>
+                            <TextBox  Text="{Binding MiniTime,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="最长时间"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox  Text="{Binding MaxTime,Mode=TwoWay}"></TextBox>
+                            <TextBox  Text="{Binding MaxTime,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

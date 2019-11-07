@@ -29,5 +29,12 @@ namespace WatchExeTime.DAO.Service
             return resultExecute;
         }
 
+        public int UpdateAllUsing()
+        {
+            string strsql = "UPDATE WatchExe SET IsUsing=0";
+            var resultExecute = SQLiteHelper.CreateConnection().Execute(strsql);
+            return resultExecute;
+        }
+
     }
 }

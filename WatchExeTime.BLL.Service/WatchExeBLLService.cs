@@ -18,7 +18,13 @@ namespace WatchExeTime.BLL.Service
 
         public int UpdateWathExeTime(WatchExeModel model)
         {
-            return SingletonFactory.Instance.GetBaseFactory().CreateWatchExeService().UpdateWathExeTime(model);
+            int result = 0;
+            if (model?.IsUsing == 1)
+            {
+                result = SingletonFactory.Instance.GetBaseFactory().CreateWatchExeService().UpdateAllUsing();
+            }
+            result = SingletonFactory.Instance.GetBaseFactory().CreateWatchExeService().UpdateWathExeTime(model);
+            return result;
         }
     }
 }

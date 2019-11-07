@@ -10,5 +10,6 @@ namespace WatchExeTime.DAO.IServices
     {
         ObservableCollection<WatchExeModel> SelectData();
         int UpdateWathExeTime(WatchExeModel model);
+        int UpdateAllUsing();
     }
 }

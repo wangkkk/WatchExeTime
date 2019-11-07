@@ -21,16 +21,19 @@ namespace WatchExeTime.Converter
             if(v<60)
                     return $"{v}秒";
             else if(v>=60&&v<3600)
-                    return $"{v / 60}分";
+            {
+                TimeSpan time = TimeSpan.FromSeconds(v);
+                return $"{time.Minutes}分{time.Seconds}秒"; 
+            }
             else if(v<3600*12)
             {
                 TimeSpan time = TimeSpan.FromSeconds(v);
-                return v.ToString(@"hh\:mm\:ss");
+                return $"{time.Hours}小时{time.Minutes}分{time.Seconds}秒";
             }
             else
             {
                 TimeSpan time = TimeSpan.FromSeconds(v);
-                return v.ToString(@"DD hh\:mm\:ss");
+                return $"{time.Days}天{time.Hours}小时{time.Minutes}分{time.Seconds}秒";
             }
         }
 

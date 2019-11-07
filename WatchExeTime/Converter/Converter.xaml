@@ -5,4 +5,5 @@
     <local:ExeIDToStringConverter x:Key="ExeIDToStringConverter"/>
     <local:DateTimeFomatConverter x:Key="DateTimeFomatConverter"/>
     <local:SeCondTimeFormatConverter x:Key="SeCondTimeFormatConverter"/>
+    <local:IntToBoolConverter x:Key="IntToBoolConverter"/>
 </ResourceDictionary>

@@ -20,6 +20,7 @@ namespace WatchExeTime.ViewModel
             {
                 _watchExeListCollection = value;
                 OnPropertyChanged();
+               
             }
         }
         private WatchExeModel _selectWatchExeModel;
@@ -50,6 +51,12 @@ namespace WatchExeTime.ViewModel
                 var entity= WatchExeList.Where(m => m.ExeID == ExeID).FirstOrDefault();
                 if (entity != null)
                 {
+                    if (string.IsNullOrEmpty(entity.ExeTitleName))
+                    {
+                        MessageBox.Show("程序标题不能为空");
+                        return;
+                    }
+                    
                     string result = string.Format("更新监视程序{0}!",
                         WatchExeBLLService.Instance.UpdateWathExeTime(entity) > 0 ? "成功" : "失败");
                     MessageBox.Show(result+"重启程序后生效");}

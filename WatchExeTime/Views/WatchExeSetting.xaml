@@ -7,7 +7,7 @@
         mc:Ignorable="d"  WindowStartupLocation="CenterScreen"  
         Title="监视程序设置" Height="450" Width="800">
     <Grid>
-        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding WatchExeList,Mode=TwoWay}" SelectedItem="{Binding SelectWatchExe}">
+        <DataGrid AutoGenerateColumns="False" SelectionMode="Single" CanUserAddRows="False" ItemsSource="{Binding WatchExeList,Mode=TwoWay}" SelectedItem="{Binding SelectWatchExe}">
             <!--<i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding UpdateWatchExeCommand}"/>
@@ -17,25 +17,34 @@
                 <DataGridTemplateColumn Header="程序名称"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                    <TextBox  Text="{Binding ExeName,Mode=TwoWay}"></TextBox>
+                            <TextBox  Text="{Binding ExeName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                     </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="程序标题名称"  Width="*">
                    <DataGridTemplateColumn.CellTemplate>
                        <DataTemplate>
-                            <TextBox  Text="{Binding ExeTitleName,Mode=TwoWay}"></TextBox>
+                            <TextBox  Text="{Binding ExeTitleName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                        </DataTemplate>
                    </DataGridTemplateColumn.CellTemplate>
                </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="程序路径中包含的名称"  Width="*">
                    <DataGridTemplateColumn.CellTemplate>
                        <DataTemplate>
-                            <TextBox  Text="{Binding ExePathName,Mode=TwoWay}"></TextBox>
+                            <TextBox  Text="{Binding ExePathName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
                        </DataTemplate>
                    </DataGridTemplateColumn.CellTemplate>
                </DataGridTemplateColumn>
-                <DataGridCheckBoxColumn Header="是否正在使用"  Binding="{Binding IsUsing,Mode=TwoWay}"  Width="*"/>
+
+                <DataGridTemplateColumn Header="是否正在使用" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <RadioButton VerticalAlignment="Center" HorizontalAlignment="Center" GroupName="Using" IsChecked="{Binding IsUsing,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource IntToBoolConverter}}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+</DataGridTemplateColumn>
+               
+                    
                 <DataGridTextColumn Header="父类ID" Binding="{Binding ParentExeID}"  Width="*" />
                 <DataGridTemplateColumn Header="更新"  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
