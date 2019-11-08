@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,20 @@ namespace WatchExeTime.Views
         {
             InitializeComponent();
             this.DataContext = vm;
+            //this.Loaded += (sender, e) => { vm.GetTime(); };
+            this.IsVisibleChanged += WatchUseTime_FocusableChanged;
+        }
+
+        private void WatchUseTime_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+           if(this.IsVisible)
+               vm.GetTime();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            e.Cancel = true;  // cancels the window close    
+            this.Hide();      // Programmatically hides the window
         }
     }
 }

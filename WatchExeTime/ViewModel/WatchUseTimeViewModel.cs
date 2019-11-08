@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WatchExeTime.BLL.Service;
+using WatchExeTime.common;
 
 namespace WatchExeTime.ViewModel
 {
@@ -21,9 +22,9 @@ namespace WatchExeTime.ViewModel
             }
         }
 
-        public WatchUseTimeViewModel()
+        public void GetTime()
         {
-            TodayTime = WatchTimeBLLService.Instance.GetAllTime(0,1);
+            TodayTime = WatchTimeBLLService.Instance.GetAllTime(GlobalCommon.CurrentExeID??1, 1);
 
         }
     }

@@ -56,10 +56,11 @@ namespace WatchExeTime.ViewModel
                         MessageBox.Show("程序标题不能为空");
                         return;
                     }
-                    
+
+                    GlobalCommon.UsingModel = entity;
                     string result = string.Format("更新监视程序{0}!",
                         WatchExeBLLService.Instance.UpdateWathExeTime(entity) > 0 ? "成功" : "失败");
-                    MessageBox.Show(result+"重启程序后生效");}
+                    MessageBox.Show(result);}
                
             }
             catch (Exception ex)

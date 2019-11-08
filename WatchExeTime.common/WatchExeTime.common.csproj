@@ -46,6 +46,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalCommon.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="NotifyIconHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

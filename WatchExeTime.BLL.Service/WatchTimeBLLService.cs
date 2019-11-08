@@ -37,10 +37,13 @@ namespace WatchExeTime.BLL.Service
             List<WatchTimeModel>  ModelList=SingletonFactory.Instance.GetBaseFactory().CreateWatchTimeService().SelectData($"ExeID={exeID}");
             if (ModelList != null && ModelList.Count > 0)
             {
+                ModelList.ForEach(m=> {
+                    if (m.EndTime != null && m.StartTime != null)
+                        totalTime += type == 0 ? ((TimeSpan)(m.EndTime - m.StartTime)).Minutes: ((TimeSpan)(m.EndTime - m.StartTime)).Seconds;
+                });
 
-                ModelList.ForEach(m => {if(m.EndTime!=null&&m.StartTime!=null)totalTime += ((TimeSpan)(m.EndTime - m.StartTime)).Minutes;});
+               
             }
-
             return type==0?totalTime!=0? (double)86400/totalTime:0: totalTime;
         }
     }

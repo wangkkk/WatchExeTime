@@ -42,8 +42,16 @@ namespace WatchExeTime
         {
             //初始化数据库
             SingletonFactory.Instance.CreateJDBC(string.Empty);
-
+            DispatcherUnhandledException += App_DispatcherUnhandledException;
+           
         }
+
+
+        private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            NotifyIconHelper.RemoveNotifycation();
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             PropgramManager.OnlyOneExeOpen(this);
