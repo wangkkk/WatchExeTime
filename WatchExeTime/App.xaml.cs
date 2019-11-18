@@ -69,19 +69,21 @@ namespace WatchExeTime
         /// <param name="e"></param>
         private void ShowItemWindow(object sender, EventArgs e)
         {
-            switch ((sender as MenuItem)?.Name)
+            if (GlobalCommon.ProgramVisibleState != 1)
             {
-                case "watchExeTypeItem":
-                    WindowHelper.ShowWindow(ExeSetting);
-                    break;
-                case "stageItem":
-                    WindowHelper.ShowWindow(WatchExeStageSetting);
-                    break;
-                case "timeItem":
-                    WindowHelper.ShowWindow(WatchUseTime);
-                    break;
+                switch ((sender as MenuItem)?.Name)
+                {
+                    case "watchExeTypeItem":
+                        WindowHelper.ShowWindow(ExeSetting);
+                        break;
+                    case "stageItem":
+                        WindowHelper.ShowWindow(WatchExeStageSetting);
+                        break;
+                    case "timeItem":
+                        WindowHelper.ShowWindow(WatchUseTime);
+                        break;
+                }
             }
-
         }
         #endregion
     }

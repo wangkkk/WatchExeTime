@@ -14,5 +14,10 @@ namespace WatchExeTime.common
         /// </summary>
         public static int? CurrentExeID { get; set; }
         public static WatchExeModel UsingModel { get; set; }
+
+        /// <summary>
+        /// 程序当前显示状态 1隐藏 0显示
+        /// </summary>
+        public static int ProgramVisibleState { get; set; } = 0;
     }
 }

@@ -71,15 +71,6 @@ namespace WatchExeTime.BLL
             int length = GetWindowTextLength(hWnd);
             StringBuilder text = new StringBuilder(length + 1);
             GetWindowText(hWnd, text, text.Capacity);
-            if (!string.IsNullOrEmpty(text.ToString()))
-            {
-                using (StreamWriter sw = new StreamWriter("D:\\当前程序列表.txt", true))
-                {
-                    sw.WriteLine(System.DateTime.Now.ToString("yyyy-mm-dd HH:mm:ss")+">>"+text);
-                    sw.Close();
-                    sw.Dispose();
-                }
-            }
             return text.ToString();
         }
         /// <summary>
@@ -98,15 +89,6 @@ namespace WatchExeTime.BLL
             GetModuleFileNameEx(hProcess, IntPtr.Zero, text, text.Capacity);
 
             CloseHandle(hProcess);
-            if (!string.IsNullOrEmpty(text.ToString()))
-            {
-                using (StreamWriter sw = new StreamWriter("D:\\当前程序路径.txt", true))
-                {
-                    sw.WriteLine(System.DateTime.Now.ToString("yyyy-mm-dd HH:mm:ss") + ">>" + text);
-                    sw.Close();
-                    sw.Dispose();
-                }
-            }
             return text.ToString();
         }
     }

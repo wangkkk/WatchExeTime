@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WatchExeTime.BLL;
 using WatchExeTime.BLL.Service;
+using WatchExeTime.common;
 using WatchExeTime.ViewModel;
 
 namespace WatchExeTime
@@ -62,10 +63,12 @@ namespace WatchExeTime
             if (keyId == hotKey1)
             {
                 this.Visibility = Visibility.Hidden;//隐藏窗口
+                GlobalCommon.ProgramVisibleState = 1;
             }
             else if (keyId == hotKey2)
             {
                 this.Visibility = Visibility.Visible;//显示窗口
+                GlobalCommon.ProgramVisibleState = 0;
             }
         }
         #endregion

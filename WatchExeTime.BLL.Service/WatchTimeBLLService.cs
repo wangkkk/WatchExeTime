@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using WatchExeTime.DAO;
 using WatchExeTime.DAO.Model;
 using WatchExeTime.Factory;
@@ -35,6 +37,7 @@ namespace WatchExeTime.BLL.Service
         {
             double totalTime = 0;
             List<WatchTimeModel>  ModelList=SingletonFactory.Instance.GetBaseFactory().CreateWatchTimeService().SelectData($"ExeID={exeID}");
+            //WriteLog("ModelList.Count：" + ModelList.Count);
             if (ModelList != null && ModelList.Count > 0)
             {
                 ModelList.ForEach(m=> {
@@ -44,7 +47,25 @@ namespace WatchExeTime.BLL.Service
 
                
             }
-            return type==0?totalTime!=0? (double)86400/totalTime:0: totalTime;
+
+            double time = type == 0 ? totalTime != 0 ? totalTime/(double) 86400  : 0 : totalTime;
+            //WriteLog($"type:{type},totalTime:{totalTime}运算公式结果：{time}");
+            return time;
         }
+
+        //public void WriteLog(string value)
+        //{
+        //   string path = System.AppDomain.CurrentDomain.BaseDirectory + "/Logs/";
+        //    //如果目录不存在,将创建目录
+        //    if (!Directory.Exists(path))
+        //        Directory.CreateDirectory(path);
+        //    path = string.Format("{0}{1}{2}", path, DateTime.Now.ToString("yyyyMMdd"), "-.txt");
+        //    using (StreamWriter sw = new StreamWriter(path,true))
+        //    {
+        //        sw.WriteLine("当前时间：[" + DateTime.Now.ToString() + "] Msg:" + value);
+        //        sw.Close();
+        //        sw.Dispose();
+        //    }
+        //}
     }
 }

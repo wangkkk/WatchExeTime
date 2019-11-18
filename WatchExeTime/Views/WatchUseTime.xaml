@@ -8,7 +8,7 @@
         Title="WatchUseTime" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20">
-            <Run Text="今天共使用"/>
+            <Run Text="总共使用"/>
             <Run Text="{Binding TodayTime,Converter={StaticResource SeCondTimeFormatConverter}}"/>
         </TextBlock>
     </Grid>
