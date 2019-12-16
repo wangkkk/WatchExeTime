@@ -8,8 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/images/backgroud/wmx.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/images/backgroud/xxp.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/images/backgroud/yz.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reference/galasoft.mvvmlight.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reference/microsoft.expression.interactions.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reference/system.windows.interactivity.dll")]
 
 

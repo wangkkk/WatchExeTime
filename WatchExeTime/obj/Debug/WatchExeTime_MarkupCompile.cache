@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\QMDownload\WatchExeTime\WatchExeTime\obj\Debug\
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime\obj\Debug\
 WatchExeTime
 none
 false
 DEBUG;TRACE
-D:\QMDownload\WatchExeTime\WatchExeTime\App.xaml
-2-868777552
-
-10565535506
-19-173369544
-Converter\Converter.xaml;Views\MainWindow.xaml;
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime\App.xaml
+5-639097840
+3-1781548829
+18-905360857
+26-1696656955
+Converter\Converter.xaml;Views\MainWindow.xaml;Views\WatchExeSetting.xaml;Views\WatchExeStageSetting.xaml;Views\WatchUseTime.xaml;
 
 False
 

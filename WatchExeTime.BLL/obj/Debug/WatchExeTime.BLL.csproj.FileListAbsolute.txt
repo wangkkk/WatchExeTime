@@ -4,3 +4,10 @@ D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.csprojAss
 D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.csproj.CoreCompileInputs.cache
 D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.dll
 D:\QMDownload\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.pdb
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime.BLL\bin\Debug\Images\Logo.ico
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime.BLL\bin\Debug\WatchExeTime.BLL.dll
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime.BLL\bin\Debug\WatchExeTime.BLL.pdb
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.csprojAssemblyReference.cache
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.csproj.CoreCompileInputs.cache
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.dll
+d:\Documents\CutVideoToGif\WatchExeTime\WatchExeTime.BLL\obj\Debug\WatchExeTime.BLL.pdb
